@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Grinchen - Julen är stulen</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      Width =2000; // ange bredden på sidan som ska snöas in...
+      Height =2000; // ange höjden på sidan som ska snöas in...
+      Count =50; // antal snöflingor OBS! ange inte för stort antal!
+      MaxStep=10; // max steg i rörelsen
+      MinStep=1; // min steg i rörelsen
+      MaxFlake=10; // max storlek på snöflinga
+      MinFlake=4; // min storlek på snöflinga
+       
+      PosX = new Array();
+      PosY = new Array();
+      StepX = new Array();
+      StepY = new Array();
+      StarSize=new Array();
+       
+      for (i = 0; i < Count; i++) {
+      PosX[i] = Math.random()*Width;
+      PosY[i] = Math.random()*Height;
+      StepX[i] =MinStep+Math.random()* -MaxStep;
+      StepY[i] =MinStep+Math.random()* MaxStep;
+      StarSize[i]=MinFlake+Math.random() * MaxFlake;
+       
+      document.write("<div id='Obj" + i + "' style='position:absolute; left:0px; top:-20px; z-index:10000; visibility:hidden; color:#fff; font-weight:normal; font-family:Verdana; font-size:"+StarSize[i]+"pt'>•</div>");
+      }
+       
+      function animate() {
+      for (i = 0; i < Count; i++) {
+      PosY[i] += StepY[i];
+      PosX[i] += StepX[i];
+       
+      document.getElementById("Obj"+i).style.visibility = "visible";
+      if (PosY[i] > Width || PosX[i] > Height || PosX[i]<0) { // starta om från toppen av sidan när mitten nås
+      PosX[i] = Math.random()*Width; ///2
+      PosY[i] = -20;
+      StepX[i] = MinStep+Math.random()* -MaxStep;
+      StepY[i] = MinStep+Math.random()* MaxStep;
+      }
+       
+      document.getElementById("Obj"+i).style.top = PosY[i] + "px";
+      document.getElementById("Obj"+i).style.left = PosX[i] + "px";
+      }
+      setTimeout("animate()", 50);// hastighet
+      }
+       
+      setTimeout("animate()", 1000);
+       
+      </script>
+    <!-- Movie background -->
+    <div class="movie-background">
+      <div class="container">
+        <div class="cover">
+          <img src="https://sfanytime-images-prod.secure.footprint.net/COVERM/ad9e0d88-b12c-40d4-9d23-a95a00d7af00_COVERM_SV.jpg?w=375&ar=0.692&fit=crop&fm=pjpg&s=b69cc34339fe23cc7e6e8c011284ba11" alt="Cover">
+        </div>
+        <div class="content">
+          <h1>Grinchen - Julen är stulen <span class="year">(2000)</span></h1>
+          <p>Grinchen – julen är stulen (engelsk originaltitel: Dr. Seuss' How the Grinch Stole Christmas) är en amerikansk spelfilm från 2000 som baseras på Dr. Seuss bok från 1957. Filmen är regisserad av Ron Howard och producerad av Brian Grazer. Jim Carrey har huvudrollen som Grinchen. Filmen belönades med en Oscar för Bästa smink.Filmen handlar om en liten by där julen är den största högtiden någonsin. Men det finns en som inte gillar julen – Grinchen. Han är en lustig figur som bor högt över byn i en grotta med en hund som enda sällskap. Många i byn känner till grottan men ingen vågar sig upp. Grinchen bestämmer sig för att förstöra julen för byborna så han klär ut sig till tomte och går till alla hus i hela byn och tar allt. Varenda liten julgranskula, allt som har med julen att göra.
+          </p>
+          <a href="https://sv.wikipedia.org/wiki/Grinchen" >Läs mer om filmen här!</a>
+
+          <div class="rating">
+            <img class="rate" src="file:///Users/rebeccawahl/Desktop/IP%20PRODUKTION%20&%20FORM/ERICA%20-%20WEBB%20KODNING/star.png" alt="">
+            <h4><span class="big">10</span>/10</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <iframe width="1000" height="500" src="https://www.youtube.com/embed/YQV5Pr7pWtM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p>
+      <p>
+          <!-- Main character -->
+    <div class="main-character">
+      <div class="image">
+        <img src="file:///Users/rebeccawahl/Desktop/IP%20PRODUKTION%20&%20FORM/ERICA%20-%20WEBB%20KODNING/Jim_Carrey_2008-1.jpg" alt="Daniel Radcliffe">
+      </div>
+        <div class="content">
+          <h2>Grinchen</h2>
+          <h3>Spelad av Jim Carrey</h3>
+          <p>James Eugene "Jim" Carrey, född 7 januari 1962 i Ontario, han är en kanadensisk ståuppkomiker, skådespelare och film producent. Carrey är en känd för sitt maniska slapstick-skådespelari oc hanses vara en av Hollywoods största stjärnor. Carrey blev uppmärksammad när han hade en central roll i In Living Color. Hans genombrott kom därefter som huvudrollsinnehavare i filmer som "Den galopperande detektiven, Dum & dummare, The Mask och Ace Ventura - den galopperande detektiven rider igen. Han har även haft huvudrollen i Grinchen - Julen är stulen.</p>
+        </div>
+    </div>
+<p>
+  <p>
+    <!-- Director -->
+    <div class="director">
+      <div class="image">
+        <img src="file:///Users/rebeccawahl/Desktop/IP%20PRODUKTION%20&%20FORM/ERICA%20-%20WEBB%20KODNING/Ron_Howard_2011_Shankbone_2.jpg" alt="David Yates">
+      </div>
+        <div class="content">
+          <h2>Regissör</h2>
+          <h3>Ron Howard</h3>
+          <p>Ron Howard är skådespelare, filmproducent regissör. Ron är född 1 mars 1954 i Duncan, Oklaholma. Han har fått en Oscar för både bästa film och regi. 
+
+            Howard debuterade som regissör 1978 med komedin Blåst till tusen (1977). Han började sin karriär inom film som skådespelare. Han uppträdde först i Resan (1959) och Music Man (1962), sedan som Opie i den långvariga tv-serien The Andy Griffith Show (1960). Howard spelade senare i den populära serien Gänget och jag (1974) och drog gynnsamma recensioner för sina föreställningar i Sista natten med gänget (1973) och Den siste gunfightern (1976).</p>
+      </div>
+    </div>
+
+  </body>
+</html>
